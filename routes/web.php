@@ -27,5 +27,7 @@ Route::get('/', function () {
         'SHOP'
     ];
 
-    return view('dc-comics', compact('linkNav'));
+    $comicBooks = config("comics");
+
+    return view('home', compact('linkNav', 'comicBooks'));
 });

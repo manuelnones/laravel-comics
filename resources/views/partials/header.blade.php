@@ -19,6 +19,4 @@
             </div> 
         </nav>
     </div>
-      
-    <div class="top-img"></div>
 </header>

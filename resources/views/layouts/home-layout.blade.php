@@ -19,15 +19,9 @@
 
     @include('partials/header')
 
-    <div class="container">
-        <main>
-            <h1>titolo pagina</h1>
-        </main>
-            
-        <footer class="mt-5">
-            footer
-        </footer>
-    </div>
+    @yield('content')
+
+    @include('partials/footer')
 
 </body>
 
