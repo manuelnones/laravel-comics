@@ -13,21 +13,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+$iconShopElement = [
+    [
+        "src" => "buy-comics-digital-comics.png",
+        "title" => "digital comics",
+    ],
+    [
+        "src" => "buy-comics-merchandise.png",
+        "title" => "dc merchandise",
+    ],
+    [
+        "src" => "buy-comics-shop-locator.png",
+        "title" => "subscription",
+    ],
+    [
+        "src" => "buy-comics-subscriptions.png",
+        "title" => "comic shop locator",
+    ],
+    [
+        "src" => "buy-dc-power-visa.svg",
+        "title" => "dc power visa",
+    ]
+];
+
+
+Route::get('/', function () use ($iconShopElement) {
     $linkNav = [
-        'CHARACTERS',
-        'COMICS',
-        'MOVIES',
-        'TV',
-        'GAMES',
-        'COLLECTIBLES',
-        'VIDEOS',
-        'FANS',
-        'NEWS',
-        'SHOP'
+        'characters',
+        'comics',
+        'movies',
+        'tv',
+        'games',
+        'collectibles',
+        'videos',
+        'fans',
+        'news',
+        'shop'
     ];
 
     $comicBooks = config("comics");
 
-    return view('home', compact('linkNav', 'comicBooks'));
+    return view('home', compact('linkNav', 'comicBooks', 'iconShopElement'));
 });

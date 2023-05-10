@@ -22,32 +22,16 @@
             <button type="button" class="btn ps-5 pe-5 rounded-0">LOAD MORE</button>
         </div>
     </div>
-
+    
     <div id="shop-elements-container">
-        <a href="#" class="shop-element">
-            <img src="{{ Vite::asset("resources/img/buy-comics-digital-comics.png") }}" alt="" class="icon">
-            <span class="title"> digital comics </span>
-        </a>
-
-        <a href="#" class="shop-element">
-            <img src="{{ Vite::asset("resources/img/buy-comics-merchandise.png") }}" alt="" class="icon">
-            <span class="title"> dc merchandise </span>
-        </a>
-
-        <a href="#" class="shop-element">
-            <img src="{{ Vite::asset("resources/img/buy-comics-shop-locator.png") }}" alt="" class="icon">
-            <span class="title"> subscription </span>
-        </a>
-
-        <a href="#" class="shop-element">
-            <img src="{{ Vite::asset("resources/img/buy-comics-subscriptions.png") }}" alt="" class="icon">
-            <span class="title"> comic shop locator </span>
-        </a>
-
-        <a href="#" class="shop-element">
-            <img src="{{ Vite::asset("resources/img/buy-dc-power-visa.svg") }}" alt="" class="icon">
-            <span class="title"> dc power visa </span>
-        </a>
+        <div class="container d-flex gap-5">
+            @foreach ($iconShopElement as $icon)
+            <a href="#" class="shop-element">
+                <img src="{{ Vite::asset("resources/img/" . $icon['src']) }}" alt="" class="icon">
+                <span class="title">{{ $icon['title'] }}</span>
+            </a>
+            @endforeach
+        </div> 
     </div>
 </main>
 @endsection

@@ -10,7 +10,7 @@
                           <ul class="navbar-nav">
                                 @foreach ($linkNav as $link)
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">{{$link}}</a>
+                                    <a class="text-uppercase nav-link" href="#">{{$link}}</a>
                                 </li>
                                 @endforeach
                           </ul>
